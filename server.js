@@ -12,7 +12,7 @@ app.use(express.json());
 app.get('/api/test', async (req, res) => {
   try {
     res.json({
-      forecast: "rainy"
+      test: "rainy"
     });
 
   } catch (error) {
