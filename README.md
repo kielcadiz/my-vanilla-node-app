@@ -38,6 +38,7 @@ command to run if program contains helper info
 Contributors names and contact info
 
 * Aljon Cadiz (aljonrey.cadiz@gmail.com)
+* KieL Cadiz ()
 
 ## Version History
 
