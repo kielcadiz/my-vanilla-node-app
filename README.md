@@ -1,4 +1,4 @@
-# Project Title
+# My Vanilla Node App
 
 Simple overview of use/purpose.
 
