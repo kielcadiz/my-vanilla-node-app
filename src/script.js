@@ -22,6 +22,6 @@ function updateUI(data) {
 	const container = document.getElementById('main-content');
 	container.innerHTML = `
 	  <h3>Test Data</h3>
-	  <p>data: ${data.test}°C</p>
+	  <p>data: ${data.test}</p>
 	`;
 }
