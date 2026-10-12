@@ -1,16 +1,26 @@
 import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import axios from 'axios';
+import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
-app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(cors({ origin: 'http://localhost:3000' }));
+
+app.use(express.json());
+
+app.get('/api/test', async (req, res) => {
+  try {
+    res.json({
+      forecast: "rainy"
+    });
+
+  } catch (error) {
+    console.error('Test API Error:', error.message);
+    res.status(500).json({ error: `Failed to fetch test data from upstream service. ${error}` });
+  }
+});
 
 app.listen(PORT, () => {
-  console.log(`Running at http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
