@@ -6,7 +6,7 @@ const _fileName = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_fileName);
 
 const app = express();
-const PORT = 3000;
+const PORT = 4200;
 
 app.use(express.static(path.join(_dirname, 'src')));
 
